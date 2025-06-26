@@ -151,10 +151,16 @@ function AddItem(color, size, position) {
 }
 
 function GenerateCoordinates() {
-    return {
+    let Coordinates = {
         X: Math.round((Math.random() * GAME_WIDTH - SNAKE_SIZE) / SNAKE_SIZE) * SNAKE_SIZE,
         Y: Math.round((Math.random() * GAME_HEIGHT - SNAKE_SIZE) / SNAKE_SIZE) * SNAKE_SIZE
     };
+    CurrentSnake.Position.forEach(part => {
+        if (Coordinates.X == part.X && Coordinates.Y == part.Y) {
+            return GenerateCoordinates();
+        }
+    });
+    return Coordinates;
 }
 
 function CheckSnake() {

@@ -1,0 +1,36 @@
+:root {
+    --main-font: Poppins, Arial, Helvetica, sans-serif;
+    --side-font: "WDXL Lubrifont JP N", Poppins, Arial;
+}
+
+body {
+    font-family: var(--main-font);
+}
+
+#viewport {
+    display: flex;
+    gap: 15px;
+}
+
+#container {
+    border: 2px solid black;
+}
+
+#menu {
+    align-self: flex-end;
+    height: 200px;
+}
+
+#menu button {
+    font-size: 30px;
+}
+
+#title {
+    font-family: var(--side-font);
+    font-size: 60px;
+}
+
+#points {
+    font-size: 25px;
+    text-align: center;
+}
